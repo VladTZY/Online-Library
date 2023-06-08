@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card shadow my-5">
+            <h4 class="card-header">Register</h4>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label for="name">Username</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control border"
+                  />
+                  <small class="form-text text-danger feedback"></small>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="form-control border"
+                    autocomplete="off"
+                  />
+                  <small class="form-text text-danger feedback"></small>
+                </div>
+                <div class="form-group">
+                  <label for="confirmPassword">Confirm password</label>
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    class="form-control border"
+                    autocomplete="off"
+                  />
+                  <small class="form-text text-danger feedback"></small>
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="showPassword"
+                    name="showPassword"
+                  />
+                  <label class="custom-control-label" for="showPassword"
+                    >Show password</label
+                  >
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-outline-dark"
+                  name="btn"
+                  disabled
+                >
+                  Register
+                </button>
+                <a class="btn btn-outline-dark" href="../login/login.html"
+                  >Login</a
+                >
+              </form>
+            </div>
+            <div class="card-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./register.js"></script>
+  </body>
+</html>

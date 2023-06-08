@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplicatie Web pentru gestiunea unei biblioteci electronice</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <div class="header-1">
+        <a href="#" class="logo"> <i class="fas fa-book"></i> bookly </a>
+
+        <div class="icons">
+          <div id="login-btn" class="fas fa-user"></div>
+          <h1 class="username" id="username-field"></h1>
+        </div>
+      </div>
+
+      <div class="header-2">
+        <nav class="navbar">
+          <a class="pointer-cursor">home</a>
+          <a class="pointer-cursor" href="./addBook/addBook.html">Add book</a>
+          <a class="pointer-cursor" onclick="logUserOut()">Logout</a>
+          <a class="pointer-cursor" href="https://www.facebook.com"
+            >Contact Me</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- bottom navbar  -->
+
+    <nav class="bottom-navbar">
+      <a href="#home" class="fas fa-home">home</a>
+      <a href="featured" class="fas fa-list">featured</a>
+      <a href="#arrivals" class="fas fa-tags">arrivals</a>
+      <a href="#reviews" class="fas fa-comments">reviews</a>
+      <a href="#contact" class="fas fa-blogs">contact</a>
+    </nav>
+
+    <!-- icons selection starts  -->
+    <div class="align-ok">
+      <selection class="icons-container">
+        <div class="icons">
+          <i class="fas fa-plane"></i>
+          <div class="content">
+            <h3>free shipping</h3>
+            <p>order over $100</p>
+          </div>
+        </div>
+
+        <div class="icons">
+          <i class="fas fa-lock"></i>
+          <div class="content">
+            <h3>secure payment</h3>
+            <p>100 secure payment</p>
+          </div>
+        </div>
+
+        <div class="icons">
+          <i class="fas fa-redo-alt"></i>
+          <div class="content">
+            <h3>easy returns</h3>
+            <p>10 days returns</p>
+          </div>
+        </div>
+
+        <div class="icons">
+          <i class="fas fa-headset"></i>
+          <div class="content">
+            <h3>24/7 support</h3>
+            <p>call us anytime</p>
+          </div>
+        </div>
+      </selection>
+    </div>
+
+    <!-- icons section ends -->
+
+    <!-- featured section starts-->
+
+    <selection class="featured" id="featured">
+      <h1 class="heading"><span>featured books</span></h1>
+
+      <div class="swiper featured-slider">
+        <div class="swiper-wrapper book-section" id="books-wrapper">
+          <!-- <div class="swiper-slide box">
+            <div class="icons">
+              <a href="#" class="fas fa-search"></a>
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+             <div class="iamge">
+              <img src="image/book-1.png" alt="" />
+            </div>
+            <div class="content">
+              <h3>featured books</h3>
+              <div class="price">$15.99 <span>$20.99</span></div>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </selection>
+
+    <!-- featured section ends-->
+
+    <!-- newsletter section starts -->
+
+    <section class="newsletter">
+      <form action="newsletter">
+        <h3>subscribe for latest updates</h3>
+        <input
+          type="email"
+          name=""
+          placeholder="enter your email"
+          id=""
+          class="box"
+        />
+        <input value="subscribe" class="btn" />
+      </form>
+    </section>
+
+    <!-- newsletter section ends -->
+
+    <!-- footer senction starts  -->
+
+    <section class="footer">
+      <div class="box container">
+        <div class="box">
+          <h3 class="footer-text">Craiova</h3>
+          <h3><i class="fas fa-map-marker-alt"></i> Romania</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer senction ends  -->
+
+    <!-- custom js file link  -->
+    <script src="./misc/redirect.js"></script>
+    <script src="./misc/logout.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
