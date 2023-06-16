@@ -16,6 +16,10 @@ module.exports = (sequelize) => {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      coverFile: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
     },
     { timestamps: false }
   );

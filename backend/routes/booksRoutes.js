@@ -1,4 +1,5 @@
 const express = require("express");
+const { upload } = require("../middlewares/multerMiddleware");
 
 const {
   getBooks,
@@ -18,7 +19,7 @@ router.get("/", getBooks);
 
 router.get("/:id", getBook);
 
-router.post("/", createBook);
+router.post("/", upload.single("image"), createBook);
 
 router.delete("/:id", deleteBook);
 

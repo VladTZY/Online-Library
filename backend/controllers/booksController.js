@@ -15,6 +15,7 @@ const createBook = async (req, res) => {
     title: req.body.title,
     description: req.body.description,
     genre: req.body.genre,
+    coverFile: res.req.file.filename,
   });
 
   res.status(200).json(book);

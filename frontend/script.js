@@ -37,9 +37,9 @@ const main = async () => {
       <a onClick="deleteBook(${book.id})" class="fas fa-trash-can"></a>
       <a href="./updateBook/update.html?id=${book.id}" class="fas fa-pen-to-square"></a>
     </div>
-    <!-- <div class="iamge">
-      <img src="image/book-1.png" alt="" />
-    </div> -->
+    <div class="image">
+      <img src="http://localhost:4004/uploads/${book.coverFile}" alt="" />
+    </div> 
     <div class="content">
       <h3>${book.title}</h3>
       <p>${book.description}</p>
