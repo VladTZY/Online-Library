@@ -12,12 +12,15 @@ const {
 const router = express.Router();
 
 const { requireAuth } = require("../middlewares/requireAuth");
+const { requireAdmin } = require("../middlewares/requireAdmin");
 
 router.use(requireAuth);
 
 router.get("/", getBooks);
 
 router.get("/:id", getBook);
+
+router.use(requireAdmin);
 
 router.post("/", upload.single("image"), createBook);
 

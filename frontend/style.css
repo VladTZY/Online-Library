@@ -790,3 +790,9 @@ section {
 .pointer-cursor {
   cursor: pointer;
 }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

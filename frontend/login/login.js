@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((json) => {
         localStorage.setItem("token", json.token);
         localStorage.setItem("username", json.username);
+        localStorage.setItem("role", json.role);
         window.location.replace("http://127.0.0.1:5500/frontend/index.html");
       });
   });

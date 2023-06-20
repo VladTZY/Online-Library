@@ -14,11 +14,14 @@ const signUpUser = async (req, res) => {
     const user = await userModel.create({
       username: req.body.username,
       password: hash,
+      role: req.body.role,
     });
 
     const token = createToken(user.id);
 
-    res.status(200).json({ username: user.username, token: token });
+    res
+      .status(200)
+      .json({ username: user.username, role: user.role, token: token });
   } catch (err) {
     res.status(500).json(err.message);
   }
@@ -38,7 +41,9 @@ const loginUser = async (req, res) => {
 
     const token = createToken(user.id);
 
-    res.status(200).json({ username: user.username, token: token });
+    res
+      .status(200)
+      .json({ username: user.username, role: user.role, token: token });
   } catch (err) {
     res.status(500).json(err.message);
   }
