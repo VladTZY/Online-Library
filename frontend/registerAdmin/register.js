@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
       body: JSON.stringify({
         username: submittedValue.name,
         password: submittedValue.password,
-        role: "USER",
+        role: "ADMIN",
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
