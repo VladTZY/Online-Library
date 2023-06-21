@@ -29,15 +29,17 @@ document.addEventListener("DOMContentLoaded", async () => {
   form.name.value = curentBook.title;
   form.description.value = curentBook.description;
   form.genre.value = curentBook.genre;
+  form.price.value = curentBook.price;
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const { name, description, genre } = e.target;
+    const { name, description, genre, price } = e.target;
 
     const updatedBook = {
       title: name.value,
       description: description.value,
       genre: genre.value,
+      price: price.value,
     };
 
     fetch(`http://localhost:4004/api/books/${id}`, {

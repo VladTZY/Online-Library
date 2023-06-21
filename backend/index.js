@@ -18,6 +18,9 @@ app.use(express.static("public"));
 const booksRouter = require("./routes/booksRoutes");
 app.use("/api/books", booksRouter);
 
+const shoppingCartRouter = require("./routes/shoppingCartRoutes");
+app.use("/api/cart", shoppingCartRouter);
+
 const userRouter = require("./routes/userRoutes");
 app.use("/api/user", userRouter);
 

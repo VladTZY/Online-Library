@@ -7,6 +7,7 @@ const {
   createBook,
   deleteBook,
   updateBook,
+  addBookToCart,
 } = require("../controllers/booksController");
 
 const router = express.Router();
@@ -19,6 +20,8 @@ router.use(requireAuth);
 router.get("/", getBooks);
 
 router.get("/:id", getBook);
+
+router.post("/:id/addToCart", addBookToCart);
 
 router.use(requireAdmin);
 

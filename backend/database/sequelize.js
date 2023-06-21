@@ -12,5 +12,10 @@ const sequelize = new Sequelize(
 
 const bookModel = require("./models/bookModel")(sequelize);
 const userModel = require("./models/userModel")(sequelize);
+const shoppingCartModel = require("./models/shoppingCart")(sequelize);
 
-module.exports = { sequelize, bookModel, userModel };
+userModel.hasOne(shoppingCartModel);
+shoppingCartModel.belongsToMany(bookModel, { through: "CartsBooks" });
+bookModel.belongsToMany(shoppingCartModel, { through: "CartsBooks" });
+
+module.exports = { sequelize, bookModel, userModel, shoppingCartModel };

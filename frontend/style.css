@@ -796,3 +796,16 @@ section {
   align-items: center;
   justify-content: center;
 }
+
+.search-input {
+  border: solid 1px gray;
+  border-radius: 6px;
+  width: 98%;
+  padding: 10px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,25 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/yeti/bootstrap.min.css";
+
+.price {
+  display: flex;
+  margin: 10px;
+}
+
+.book-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  height: 25rem;
+  width: 25rem;
+}

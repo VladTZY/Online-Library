@@ -1,4 +1,4 @@
-const { userModel } = require("../database/sequelize");
+const { userModel, shoppingCartModel } = require("../database/sequelize");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
@@ -16,6 +16,12 @@ const signUpUser = async (req, res) => {
       password: hash,
       role: req.body.role,
     });
+
+    const shoppingCart = await shoppingCartModel.create({
+      totalPrice: 0,
+    });
+
+    await user.setShoppingCart(shoppingCart);
 
     const token = createToken(user.id);
 
@@ -41,9 +47,11 @@ const loginUser = async (req, res) => {
 
     const token = createToken(user.id);
 
-    res
-      .status(200)
-      .json({ username: user.username, role: user.role, token: token });
+    res.status(200).json({
+      username: user.username,
+      role: user.role,
+      token: token,
+    });
   } catch (err) {
     res.status(500).json(err.message);
   }

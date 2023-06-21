@@ -23,8 +23,11 @@
         <a href="#" class="logo"> <i class="fas fa-book"></i> bookly </a>
 
         <div class="icons">
-          <div id="login-btn" class="fas fa-user"></div>
           <h1 class="username" id="username-field"></h1>
+          <div
+            class="fas fa-cart-shopping"
+            onClick="window.location.replace(`http://127.0.0.1:5500/frontend/shoppingCart/shoppingCart.html`);"
+          ></div>
         </div>
       </div>
 
@@ -103,6 +106,15 @@
 
     <selection class="featured" id="featured">
       <h1 class="heading"><span>featured books</span></h1>
+
+      <div class="search-container">
+        <input
+          class="search-input"
+          id="search-input"
+          type="text"
+          placeholder="Search by name"
+        />
+      </div>
 
       <div class="swiper featured-slider">
         <div class="book-section" id="books-wrapper"></div>
